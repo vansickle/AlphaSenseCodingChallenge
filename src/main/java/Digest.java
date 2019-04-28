@@ -43,6 +43,6 @@ public abstract class Digest {
 	}
 
 	//FIXME I'd say that it violates Single-Responsibility Principle and prefer composition-over-inheritance
-	//so it would be separate classes with implement Caching and issuing Digests
+	//so it would be separate: a class responsible for Cache and an interface for issuing Digests
 	protected abstract byte[] doDigest(byte[] input);
 }
