@@ -7,11 +7,13 @@ import static org.junit.Assert.*;
 
 public class GivenSumCheckerTest {
 
-	private GivenSumChecker givenSumChecker;
+//	private GivenSumChecker givenSumChecker;
+	private SlidingWindowGivenSumChecker givenSumChecker;
 
 	@Before
 	public void setUp() throws Exception {
-		givenSumChecker = new GivenSumChecker();
+//		givenSumChecker = new GivenSumChecker();
+		givenSumChecker = new SlidingWindowGivenSumChecker();
 	}
 
 	@Test
@@ -32,5 +34,10 @@ public class GivenSumCheckerTest {
 	@Test
 	public void whenTargetInArray_thenTrue(){
 		assertThat(givenSumChecker.check(new int[]{1,2,3,4}, 4), is(true));
+	}
+
+	@Test
+	public void whenTargetIsSumOfAll_thenTrue(){
+		assertThat(givenSumChecker.check(new int[]{1,2,3,4}, 10), is(true));
 	}
 }

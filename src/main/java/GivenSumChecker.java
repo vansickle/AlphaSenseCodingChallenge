@@ -5,6 +5,7 @@ public class GivenSumChecker {
 	/**
 	 * Given an unsorted array of nonnegative integers returns true
 	 * if there is a continuous subarray which adds to a given number (target sum).
+	 * @see SlidingWindowGivenSumChecker for more efficient implementation
 	 * @param ints unsorted array of nonnegative integers
 	 * @param target target sum
 	 * @return
